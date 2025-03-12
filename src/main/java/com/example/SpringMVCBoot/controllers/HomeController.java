@@ -33,13 +33,5 @@ public class HomeController {
         return "register";
     }
 
-    @ModelAttribute("newuser")
-    public User defaultUserData(){
-        return new User();
-    }
 
-    @ModelAttribute("genderItems")
-    public List<String> defaultGenderData(){
-        return Arrays.asList(new String[]{"Male","Female","Other"});
-    }
 }

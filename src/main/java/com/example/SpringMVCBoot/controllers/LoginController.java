@@ -5,10 +5,11 @@ import com.example.SpringMVCBoot.beans.User;
 import com.example.SpringMVCBoot.repository.UserRepository;
 import exceptions.ApplicationException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
+@Controller
 public class LoginController {
 
     @Autowired
@@ -22,9 +23,5 @@ public class LoginController {
         }
         return "search";
     }
-    @ExceptionHandler(ApplicationException.class)
-    public String handleException(){
-        System.out.println("Login User Failed - Login Controller Class");
-        return "error";
-    }
+
 }
